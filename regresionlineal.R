@@ -27,8 +27,7 @@ training_set = subset( dataset, split == TRUE  )
 testing_set = subset( dataset, split == FALSE  )
 
 
-
-
-
+training_set[,2:3] = scale( training_set[,2:3] )
+testing_set[,2:3] = scale( testing_set[,2:3] )
 
 
