@@ -16,10 +16,9 @@ testing_set[,1:2] = scale( testing_set[,1:2] )
 
 
 
-classifier = svm(formula = Purchased ~ ., data = training_set, type="C-classification", kernel="radial")
+classifier = naiveBayes(formula = Purchased ~ ., data = training_set)
 
-
-prob_pred = predict( classifier, newdata =  testing_set[,-3])
+y_pred = predict( classifier, newdata =  testing_set[,-3])
 
 
 
